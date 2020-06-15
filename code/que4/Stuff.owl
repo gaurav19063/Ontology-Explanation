@@ -1,0 +1,299 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.iiitd.ac.in/inconsistant.owl#"
+     xml:base="http://www.iiitd.ac.in/inconsistant.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:pizza="http://www.co-ode.org/ontologies/pizza/pizza.owl#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.iiitd.ac.in/inconsistant">
+        <owl:versionIRI rdf:resource="http://www.iiitd.ac.in/inconsistant/1.0"/>
+        <dc:description xml:lang="en">An ontology about pizzas and their toppings.
+
+This is an example ontology that contains all constructs required for the various versions of the Pizza Tutorial run by Manchester University (see http://owl.cs.manchester.ac.uk/publications/talks-and-tutorials/protg-owl-tutorial).</dc:description>
+        <dc:title xml:lang="en">pizza</dc:title>
+        <terms:contributor>Alan Rector</terms:contributor>
+        <terms:contributor>Chris Wroe</terms:contributor>
+        <terms:contributor>Matthew Horridge</terms:contributor>
+        <terms:contributor>Nick Drummond</terms:contributor>
+        <terms:contributor>Robert Stevens</terms:contributor>
+        <terms:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Commons Attribution 3.0 (CC BY 3.0)</terms:license>
+        <terms:provenance xml:lang="en">v2.0 Added new annotations to the ontology using standard/well-know annotation properties
+
+v1.5. Removed protege.owl import and references. Made ontology URI date-independent
+
+v1.4. Added Food class (used in domain/range of hasIngredient), Added several hasCountryOfOrigin restrictions on pizzas, Made hasTopping invers functional</terms:provenance>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pizza</rdfs:label>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/provenance -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/provenance"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant#hasName -->
+
+    <owl:ObjectProperty rdf:about="http://www.iiitd.ac.in/inconsistant#hasName">
+        <rdfs:domain rdf:resource="http://www.iiitd.ac.in/inconsistant/Stuff.owl#"/>
+        <rdfs:range rdf:resource="http://www.iiitd.ac.in/inconsistant/Stuff.owl#C"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant#E -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant#E">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/Stuff.owl#C"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/Stuff.owl# -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/Stuff.owl#">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/pizza.owl#Food"/>
+        <rdfs:label xml:lang="en">A</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://en.wikipedia.org/wiki/Pizza"/>
+        <skos:prefLabel xml:lang="en">Pizza</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/Stuff.owl#C -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/Stuff.owl#C">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/pizza.owl#Food"/>
+        <rdfs:label xml:lang="en">C</rdfs:label>
+        <rdfs:label xml:lang="pt">CoberturaDaPizza</rdfs:label>
+        <skos:prefLabel xml:lang="en">Pizza Topping</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#DeepPanBase -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#DeepPanBase">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/stuff.owl#B"/>
+        <owl:disjointWith rdf:resource="http://www.iiitd.ac.in/inconsistant/pizza.owl#ThinAndCrispyBase"/>
+        <rdfs:label xml:lang="pt">BaseEspessa</rdfs:label>
+        <rdfs:label xml:lang="en">DeepPanBase</rdfs:label>
+        <skos:prefLabel xml:lang="en">Deep Pan Base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#Food -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#Food">
+        <rdfs:label xml:lang="en">Stuff</rdfs:label>
+        <skos:prefLabel xml:lang="en">Food</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#ThinAndCrispyBase -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#ThinAndCrispyBase">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/stuff.owl#B"/>
+        <rdfs:label xml:lang="pt">BaseFinaEQuebradica</rdfs:label>
+        <rdfs:label xml:lang="en">ThinAndCrispyBase</rdfs:label>
+        <skos:prefLabel xml:lang="en">Thin And Crispy Base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/stuff.owl#B -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/stuff.owl#B">
+        <rdfs:subClassOf rdf:resource="http://www.iiitd.ac.in/inconsistant/pizza.owl#Food"/>
+        <rdfs:label xml:lang="en">B</rdfs:label>
+        <rdfs:label xml:lang="pt">BaseDaPizza</rdfs:label>
+        <skos:prefLabel xml:lang="en">Pizza Base</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/stuff.owl#stuff -->
+
+    <owl:Class rdf:about="http://www.iiitd.ac.in/inconsistant/stuff.owl#stuff">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.iiitd.ac.in/inconsistant#hasName"/>
+                <owl:someValuesFrom rdf:resource="http://www.iiitd.ac.in/inconsistant#E"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A class to demonstrate mistakes made with setting a property domain. The property hasTopping has a domain of Pizza. This means that the reasoner can infer that all individuals using the hasTopping property must be of type Pizza. Because of the restriction on this class, all members of IceCream must use the hasTopping property, and therefore must also be members of Pizza. However, Pizza and IceCream are disjoint, so this causes an inconsistency. If they were not disjoint, IceCream would be inferred to be a subclass of Pizza.</rdfs:comment>
+        <rdfs:label xml:lang="en">D</rdfs:label>
+        <rdfs:label xml:lang="pt">Sorvete</rdfs:label>
+        <skos:prefLabel xml:lang="en">Ice Cream</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#America -->
+
+    <owl:Thing rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#America">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#England -->
+
+    <owl:Thing rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#England">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#France -->
+
+    <owl:Thing rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#France">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#Germany -->
+
+    <owl:Thing rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#Germany">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- http://www.iiitd.ac.in/inconsistant/pizza.owl#Italy -->
+
+    <owl:Thing rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#Italy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </owl:Thing>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/Stuff.owl#"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/Stuff.owl#C"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/stuff.owl#B"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/stuff.owl#stuff"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#America"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#England"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#France"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#Germany"/>
+            <rdf:Description rdf:about="http://www.iiitd.ac.in/inconsistant/pizza.owl#Italy"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

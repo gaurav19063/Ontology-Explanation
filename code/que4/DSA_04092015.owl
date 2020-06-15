@@ -1,0 +1,2557 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/GDS.owl#"
+     xml:base="http://www.owl-ontologies.com/GDS.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.owl-ontologies.com/GDS.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_access_style -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_access_style">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#ACCESS_STYLE"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_avg_space_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_avg_space_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_space_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_avg_time_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_avg_time_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_time_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_best_space_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_best_space_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_space_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_best_time_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_best_time_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_time_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_child -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_child">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_complexity">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_design_technique -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_design_technique">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_edge -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_edge">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_file_organization -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_file_organization">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_graph_traversal -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_graph_traversal">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_next -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_next">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_node -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_node">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#NODE"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_operation -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_operation">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_parent -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_parent">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_prev -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_prev">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_sibling -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_sibling">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_space_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_space_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_time_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_time_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_tree_traversals -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_tree_traversals">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_graph_traversal"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_worst_space_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_worst_space_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_space_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_worst_time_complexity -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_worst_time_complexity">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_time_complexity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#operates_on -->
+
+    <owl:ObjectProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#operates_on">
+        <rdfs:range rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <owl:inverseOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_cycle -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_cycle">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_depth -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_depth">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_handling_process -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_handling_process">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_height -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_height">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_value">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#NODE"/>
+        <rdfs:range rdf:resource="&xsd;anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#has_weight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#has_weight">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+        <rdfs:range rdf:resource="&xsd;integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_balanced_tree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_balanced_tree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_complete_tree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_complete_tree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_connected_graph -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_connected_graph">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_full_tree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_full_tree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_ordered_tree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_ordered_tree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#is_perfect_tree -->
+
+    <owl:DatatypeProperty rdf:about="http://www.owl-ontologies.com/GDS.owl#is_perfect_tree">
+        <rdfs:domain rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ACCESS_STYLE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ACCESS_STYLE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ACYCLIC_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ACYCLIC_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_cycle"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/GDS.owl#CYCLIC_GRAPH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ADT -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ALGORITHM">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_design_technique"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_complexity"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>https://en.wikipedia.org/wiki/List_of_algorithms and CLRS has been used as reference.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ALL_PAIRS_SHORTEST_PATH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ALL_PAIRS_SHORTEST_PATH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SHORTEST_PATH_ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ARRAY -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ARRAY">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#CONTINOUS_STORAGE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#BINARY_HEAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#BINARY_HEAP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#HEAP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#BINARY_TREE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#BINARY_TREE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#BINOMIAL_HEAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#BINOMIAL_HEAP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#MERGEABLE_HEAP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#BINOMIAL_TREE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#BINOMIAL_TREE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#CHILD_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#CHILD_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_parent"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#COMPLEXITY -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#CONNECTED_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#CONNECTED_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#is_connected_graph"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#CONTINOUS_STORAGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#CONTINOUS_STORAGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#STORAGE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_access_style"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#RANDOM_ACCESS_STYLE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#CONVEX_HULL_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#CONVEX_HULL_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#CYCLIC_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#CYCLIC_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_cycle"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">true</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DICTIONARY -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DICTIONARY">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:comment>Dictionary stores data in the form of (key, value) pairs. A dictionary is also called map or associative array or symbol table.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DIRECTED_EDGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DIRECTED_EDGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DIRECTED_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DIRECTED_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_edge"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DIRECTED_EDGE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_GRAPH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DISCONNECTED_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DISCONNECTED_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#is_connected_graph"/>
+                <owl:hasValue rdf:datatype="&xsd;boolean">false</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:comment>Disjoint-set is also called union–find data structure or merge–find set.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_next"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_prev"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#DYNAMIC_SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#DYNAMIC_SET">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/GDS.owl#MUTABLE_SET"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#EDGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#EDGE">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_weight"/>
+                <owl:allValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#EXTERNAL_SORTING_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#EXTERNAL_SORTING_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SORTING_ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FIBONACCI_HEAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FIBONACCI_HEAP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#MERGEABLE_HEAP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FILE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FILE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_file_organization"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:comment>A file is a collection of data stored on mass storage.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FLOW_NETWORK_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FLOW_NETWORK_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#FROZEN_SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#FROZEN_SET">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/GDS.owl#STATIC_SET"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_edge"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Graph is a collection of nodes and edges.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_child"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_parent"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_sibling"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#HASH_MAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#HASH_MAP">
+        <owl:equivalentClass rdf:resource="http://www.owl-ontologies.com/GDS.owl#HASH_TABLE"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#DICTIONARY"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#HASH_TABLE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#HASH_TABLE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#DICTIONARY"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#HEAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#HEAP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ACYCLIC_GRAPH"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#CONNECTED_GRAPH"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#HEAP_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#HEAP_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#HEAP"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#INTERNAL_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#INTERNAL_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_parent"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_child"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SORTING_ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LEAF_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LEAF_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_child"/>
+                <owl:onClass rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LINKED_STORAGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LINKED_STORAGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#STORAGE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_access_style"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENTIAL_ACCESS_STYLE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LIST -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LIST">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#LINKED_STORAGE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LIST_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LIST_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_next"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_prev"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#LOOP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#LOOP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#MATRIX_MULTIPLICATION_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#MATRIX_MULTIPLICATION_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#MERGEABLE_HEAP -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#MERGEABLE_HEAP">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#HEAP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#MINIMUM_SPANNING_TREE_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#MINIMUM_SPANNING_TREE_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#MUTABLE_SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#MUTABLE_SET">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#NODE">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_value"/>
+                <owl:someValuesFrom rdf:resource="&xsd;anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#OPERATION">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.owl-ontologies.com/GDS.owl#STORAGE"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                        <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#PARENT_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#PARENT_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_child"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#QUEUE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#QUEUE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_handling_process"/>
+                <owl:hasValue>FIFO</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Queue is a FIFO structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#RANDOM_ACCESS_STYLE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#RANDOM_ACCESS_STYLE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ACCESS_STYLE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#ROOT_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#ROOT_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_parent"/>
+                <owl:onClass rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+                <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:qualifiedCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SEQUENTIAL_ACCESS_STYLE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SEQUENTIAL_ACCESS_STYLE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ACCESS_STYLE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SET">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A set is an un-ordered pool of unique objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SET_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DYNAMIC_SET"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <rdfs:comment>What aboutdisjoint-set?</rdfs:comment>
+        <owl:annotatedSource rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#DYNAMIC_SET"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SHORTEST_PATH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SHORTEST_PATH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SIBLING_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SIBLING_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_parent"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_sibling"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SINGLE_PAIR_SHORTEST_PATH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SINGLE_PAIR_SHORTEST_PATH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SHORTEST_PATH_ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SINGLE_SINGLE_SHORTEST_PATH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SINGLE_SINGLE_SHORTEST_PATH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SHORTEST_PATH_ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:someValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_node"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST_NODE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST_NODE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_NODE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_next"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST_NODE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#SORTING_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#SORTING_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#STACK -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#STACK">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_handling_process"/>
+                <owl:hasValue>LIFO</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_operation"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Stack is a LIFO structure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#STATIC_SET -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#STATIC_SET">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#STORAGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#STORAGE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#STRING_MATCHING_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#STRING_MATCHING_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#TABLE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#TABLE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:comment>Tables are used in word processing applications, spreadsheets, relational databases etc.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#TREE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#TREE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ACYCLIC_GRAPH"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#CONNECTED_GRAPH"/>
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#TREE_OPERATION -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#TREE_OPERATION">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#operates_on"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALGORITHM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_EDGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_EDGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_GRAPH -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_GRAPH">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_edge"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_EDGE"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Axiom>
+        <rdfs:comment>Only undirected edges should be present in an undirected graph. But it is not mandatory that there has to be at least one edge in the graph.</rdfs:comment>
+        <owl:annotatedSource rdf:resource="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_GRAPH"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;subClassOf"/>
+        <owl:annotatedTarget>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_edge"/>
+                <owl:allValuesFrom rdf:resource="http://www.owl-ontologies.com/GDS.owl#UNDIRECTED_EDGE"/>
+            </owl:Restriction>
+        </owl:annotatedTarget>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#UNWEIGHTED_EDGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#UNWEIGHTED_EDGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#VECTOR -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#VECTOR">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#ADT"/>
+        <rdfs:comment>Similar to arrays except that vectors are dynamic in size.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#WEIGHTED_EDGE -->
+
+    <owl:Class rdf:about="http://www.owl-ontologies.com/GDS.owl#WEIGHTED_EDGE">
+        <rdfs:subClassOf rdf:resource="http://www.owl-ontologies.com/GDS.owl#EDGE"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.owl-ontologies.com/GDS.owl#has_weight"/>
+                <owl:someValuesFrom rdf:resource="&xsd;integer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#adjacencyMatrix -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#adjacencyMatrix">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#appendFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#appendFile">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#associativeList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#associativeList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+        <rdfs:comment>An association list, or a-list, is a data structure used very frequently in Lisp.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#avlTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#avlTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#BINARY_TREE"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bPlusTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bPlusTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#backtracking -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#backtracking">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#balancedTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#balancedTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#beamSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#beamSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bellmanFordAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bellmanFordAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLE_SINGLE_SHORTEST_PATH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bestFirstSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bestFirstSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#binarySearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#binarySearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#binarySearchTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#binarySearchTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#BINARY_TREE"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+        <has_tree_traversals rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#binomialTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#binomialTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#BINOMIAL_TREE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#boruvkasAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#boruvkasAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MINIMUM_SPANNING_TREE_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#branchAndBound -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#branchAndBound">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#breadthFirstSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#breadthFirstSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLE_PAIR_SHORTEST_PATH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bubbleSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bubbleSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+        <has_avg_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_exp_2"/>
+        <has_worst_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_exp_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#bucketSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#bucketSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#circularQueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#circularQueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#dequeue"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#enqueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#circularlyLinkedList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#circularlyLinkedList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#closeFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#closeFile">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#completeTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#completeTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#constant -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#constant">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#coppersmithWinogradAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#coppersmithWinogradAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MATRIX_MULTIPLICATION_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#deleteElementFromArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#deleteElementFromArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#deleteElementFromList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#deleteElementFromList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#deleteElementFromSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#deleteElementFromSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#deleteGraphFromGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#deleteGraphFromGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#depthFirstSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#depthFirstSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#dequeue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#dequeue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#dictionary -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#dictionary">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DICTIONARY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#dijkstrasAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#dijkstrasAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLE_SINGLE_SHORTEST_PATH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#directOrganization -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#directOrganization">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#diskSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#diskSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#EXTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#divideAndConquer -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#divideAndConquer">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#doubleEndedQueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#doubleEndedQueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#dequeue"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#enqueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#doublyLinkedList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#doublyLinkedList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DOUBLY_LINKED_LIST"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#dynamicProgramming -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#dynamicProgramming">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#dynamicSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#dynamicSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DYNAMIC_SET"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#edmondsKarpAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#edmondsKarpAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FLOW_NETWORK_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#enqueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#enqueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#exp -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#exp">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#extractMin -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#extractMin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#HEAP_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#fibonacciSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#fibonacciSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#file -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#file">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#appendFile"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#closeFile"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#openFile"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#readFile"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#writeFile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#find -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#find">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#findMin -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#findMin">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#HEAP_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#floydWarshallAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#floydWarshallAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALL_PAIRS_SHORTEST_PATH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#fordFulkersonAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#fordFulkersonAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FLOW_NETWORK_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#frozenSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#frozenSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FROZEN_SET"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#fullTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#fullTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#grahamScan -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#grahamScan">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#CONVEX_HULL_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#greedyMethod -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#greedyMethod">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DESIGN_TECHNIQUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#hashMap -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#hashMap">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#HASH_MAP"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#hashTable -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#hashTable">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#HASH_TABLE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#hashing -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#hashing">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#heapSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#heapSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+        <has_worst_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_log_n"/>
+        <has_avg_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_log_n"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#inOrderTraversal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#indexedOrganization -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#indexedOrganization">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#inputRestrictedDeque -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#inputRestrictedDeque">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#dequeue"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#enqueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#insertElementIntoArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#insertElementIntoArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#insertElementIntoGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#insertElementIntoGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#insertElementIntoList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#insertElementIntoList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#insertElementIntoSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#insertElementIntoSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#insertionSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#insertionSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#jarvisMarch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#jarvisMarch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#CONVEX_HULL_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#johnsonAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#johnsonAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ALL_PAIRS_SHORTEST_PATH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#knuthMorrisPrattAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#knuthMorrisPrattAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STRING_MATCHING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#kruskalsAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#kruskalsAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MINIMUM_SPANNING_TREE_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#levelOrderTraversal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#levelOrderTraversal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#linearQueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#linearQueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#linearSearch -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#linearSearch">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENCE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#log_n -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#log_n">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#m_plus_n -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#m_plus_n">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#makeSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#makeSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#mergeSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#mergeSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#multiDimensionalArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#multiDimensionalArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#multiGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#multiGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#mutableSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#mutableSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MUTABLE_SET"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#n -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#n">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#n_exp_2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#n_exp_2">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#n_exp_3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#n_exp_3">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#n_log_n -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#n_log_n">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#COMPLEXITY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#nullGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#nullGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#oneDimensionalArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#oneDimensionalArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#openFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#openFile">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#orderedArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#orderedArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#outputRestrictedDeque -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#outputRestrictedDeque">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#dequeue"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#enqueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#perfectTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#perfectTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#postOrderTraversal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#preOrderTraversal -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#primsAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#primsAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MINIMUM_SPANNING_TREE_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#priorityQueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#priorityQueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#dequeue"/>
+        <has_operation rdf:resource="http://www.owl-ontologies.com/GDS.owl#enqueue"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#push -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#push">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#quickSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#quickSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+        <has_worst_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_exp_2"/>
+        <has_avg_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_log_n"/>
+        <has_best_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_log_n"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#radixSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#radixSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+        <has_avg_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#m_plus_n"/>
+        <has_worst_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#m_plus_n"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#randomAccess -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#randomAccess">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#RANDOM_ACCESS_STYLE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#readFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#readFile">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#redBlackTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#redBlackTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#BINARY_TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#robinKarpAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#robinKarpAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STRING_MATCHING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#searchArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#searchArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#searchGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#searchGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#searchList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#searchList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#searchQueue -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#searchQueue">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#QUEUE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#searchSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#searchSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#seek -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#seek">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#selectionSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#selectionSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+        <has_avg_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_exp_2"/>
+        <has_worst_time_complexity rdf:resource="http://www.owl-ontologies.com/GDS.owl#n_exp_2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#sequentialAccess -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#sequentialAccess">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SEQUENTIAL_ACCESS_STYLE"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#sequentialOrganization -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#sequentialOrganization">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_ORGANIZATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#shellSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#shellSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#INTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#simpleGraph -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#simpleGraph">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#breadthFirstSearch"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#depthFirstSearch"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#singlyLinkedList -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#singlyLinkedList">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#LIST"/>
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#SINGLY_LINKED_LIST"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#skewedTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#skewedTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#stack -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#stack">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#staticSet -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#staticSet">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STATIC_SET"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#strassenAlgorithm -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#strassenAlgorithm">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#MATRIX_MULTIPLICATION_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#tapeSort -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#tapeSort">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#EXTERNAL_SORTING_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#union -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#union">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#DISJOINT_SET_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#unorderedArray -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#unorderedArray">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#ARRAY"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#vector -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#vector">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#VECTOR"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#writeFile -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#writeFile">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#FILE_OPERATION"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#232twoThreeTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#232twoThreeTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#234twoThreeFourTree -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#234twoThreeFourTree">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#N-ARY_TREE"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#inOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#postOrderTraversal"/>
+        <has_graph_traversal rdf:resource="http://www.owl-ontologies.com/GDS.owl#preOrderTraversal"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#A*aStar -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#A*aStar">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#GRAPH_SEARCH_ALGORITHM"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.owl-ontologies.com/GDS.owl#p[pop -->
+
+    <owl:NamedIndividual rdf:about="http://www.owl-ontologies.com/GDS.owl#p[pop">
+        <rdf:type rdf:resource="http://www.owl-ontologies.com/GDS.owl#STACK_OPERATION"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
+

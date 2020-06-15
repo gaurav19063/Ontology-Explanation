@@ -1,0 +1,408 @@
+Prefix(:=<http://www.semanticweb.org/gaurav/ontologies/2020/3/Assignment3-Q1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/gaurav/ontologies/2020/3/Assignment3-Q1>
+
+Declaration(Class(:BasketballTeam))
+Declaration(Class(:ChampionshipTour))
+Declaration(Class(:DebutTeam))
+Declaration(Class(:FootballTeam))
+Declaration(Class(:Footballer))
+Declaration(Class(:InterestingTournament))
+Declaration(Class(:KnownSportGame))
+Declaration(Class(:Master))
+Declaration(Class(:MultisportTeam))
+Declaration(Class(:Person))
+Declaration(Class(:PopularSport))
+Declaration(Class(:RugbyTeam))
+Declaration(Class(:SmallSportEvent))
+Declaration(Class(:SportGame))
+Declaration(Class(:Sportsman))
+Declaration(Class(:StrongAthlete))
+Declaration(Class(:Team))
+Declaration(Class(:TeamMember))
+Declaration(Class(:TeamSport))
+Declaration(Class(:Tournament))
+Declaration(Class(:Trainer))
+Declaration(Class(:VolleyballTeam))
+Declaration(Class(:Winner))
+Declaration(ObjectProperty(:belongsTo))
+Declaration(ObjectProperty(:consistsOf))
+Declaration(ObjectProperty(:hasWinner))
+Declaration(ObjectProperty(:includes))
+Declaration(ObjectProperty(:isPlayedAt))
+Declaration(ObjectProperty(:isPlayedBy))
+Declaration(ObjectProperty(:isWinnerOf.))
+Declaration(ObjectProperty(:organizedBy))
+Declaration(ObjectProperty(:organizes))
+Declaration(ObjectProperty(:participatesIn))
+Declaration(ObjectProperty(:plays))
+Declaration(ObjectProperty(:playsFor))
+Declaration(ObjectProperty(:responsibleFor))
+Declaration(ObjectProperty(:takesPartIn))
+Declaration(NamedIndividual(:B))
+Declaration(NamedIndividual(:BOct))
+Declaration(NamedIndividual(:BOct1))
+Declaration(NamedIndividual(:BOct2))
+Declaration(NamedIndividual(:BV))
+Declaration(NamedIndividual(:BVNov))
+Declaration(NamedIndividual(:BVNov1))
+Declaration(NamedIndividual(:BVOct))
+Declaration(NamedIndividual(:BVOct1))
+Declaration(NamedIndividual(:BVOct2))
+Declaration(NamedIndividual(:Basketball))
+Declaration(NamedIndividual(:Bob))
+Declaration(NamedIndividual(:FR))
+Declaration(NamedIndividual(:FROct))
+Declaration(NamedIndividual(:FROct1))
+Declaration(NamedIndividual(:Football))
+Declaration(NamedIndividual(:Kate))
+Declaration(NamedIndividual(:Mary))
+Declaration(NamedIndividual(:Rugby))
+Declaration(NamedIndividual(:SportGame1))
+Declaration(NamedIndividual(:SportGame2))
+Declaration(NamedIndividual(:SportGame3))
+Declaration(NamedIndividual(:SportGame4))
+Declaration(NamedIndividual(:SportGame5))
+Declaration(NamedIndividual(:SportGame6))
+Declaration(NamedIndividual(:Tim))
+Declaration(NamedIndividual(:Volleyball))
+############################
+#   Object Properties
+############################
+
+# Object Property: :belongsTo (:belongsTo)
+
+InverseObjectProperties(:belongsTo :consistsOf)
+ObjectPropertyDomain(:belongsTo :Tournament)
+ObjectPropertyRange(:belongsTo :ChampionshipTour)
+
+# Object Property: :consistsOf (:consistsOf)
+
+TransitiveObjectProperty(:consistsOf)
+ObjectPropertyDomain(:consistsOf :ChampionshipTour)
+ObjectPropertyRange(:consistsOf :Tournament)
+
+# Object Property: :hasWinner (:hasWinner)
+
+InverseObjectProperties(:hasWinner :isWinnerOf.)
+FunctionalObjectProperty(:hasWinner)
+ObjectPropertyDomain(:hasWinner :SportGame)
+ObjectPropertyRange(:hasWinner :Winner)
+
+# Object Property: :includes (:includes)
+
+InverseObjectProperties(:includes :isPlayedAt)
+ObjectPropertyDomain(:includes :Tournament)
+ObjectPropertyRange(:includes :SportGame)
+
+# Object Property: :isPlayedAt (:isPlayedAt)
+
+ObjectPropertyDomain(:isPlayedAt :SportGame)
+ObjectPropertyRange(:isPlayedAt :Tournament)
+
+# Object Property: :isPlayedBy (:isPlayedBy)
+
+InverseObjectProperties(:isPlayedBy :plays)
+ObjectPropertyDomain(:isPlayedBy :SportGame)
+ObjectPropertyRange(:isPlayedBy :Sportsman)
+
+# Object Property: :isWinnerOf. (:isWinnerOf.)
+
+ObjectPropertyDomain(:isWinnerOf. :Team)
+ObjectPropertyRange(:isWinnerOf. :SportGame)
+
+# Object Property: :organizedBy (:organizedBy)
+
+InverseObjectProperties(:organizedBy :organizes)
+ObjectPropertyDomain(:organizedBy :ChampionshipTour)
+ObjectPropertyRange(:organizedBy :Team)
+
+# Object Property: :organizes (:organizes)
+
+ObjectPropertyDomain(:organizes :Team)
+ObjectPropertyRange(:organizes :ChampionshipTour)
+
+# Object Property: :participatesIn (:participatesIn)
+
+ObjectPropertyDomain(:participatesIn :Team)
+ObjectPropertyRange(:participatesIn ObjectUnionOf(:SportGame :Tournament))
+
+# Object Property: :plays (:plays)
+
+ObjectPropertyDomain(:plays :Sportsman)
+ObjectPropertyRange(:plays :SportGame)
+
+# Object Property: :playsFor (:playsFor)
+
+ObjectPropertyDomain(:playsFor :Sportsman)
+ObjectPropertyRange(:playsFor :Team)
+
+# Object Property: :responsibleFor (:responsibleFor)
+
+ObjectPropertyDomain(:responsibleFor :Trainer)
+ObjectPropertyRange(:responsibleFor :Team)
+
+# Object Property: :takesPartIn (:takesPartIn)
+
+ObjectPropertyDomain(:takesPartIn :Team)
+ObjectPropertyRange(:takesPartIn :ChampionshipTour)
+
+
+############################
+#   Classes
+############################
+
+# Class: :BasketballTeam (:BasketballTeam)
+
+SubClassOf(:BasketballTeam :Team)
+
+# Class: :ChampionshipTour (:ChampionshipTour)
+
+SubClassOf(:ChampionshipTour ObjectSomeValuesFrom(:consistsOf :Tournament))
+SubClassOf(:ChampionshipTour ObjectSomeValuesFrom(:organizedBy :Team))
+
+# Class: :DebutTeam (:DebutTeam)
+
+SubClassOf(:DebutTeam :Team)
+
+# Class: :FootballTeam (:FootballTeam)
+
+SubClassOf(:FootballTeam :Team)
+
+# Class: :Footballer (:Footballer)
+
+SubClassOf(:Footballer :Person)
+SubClassOf(:Footballer ObjectExactCardinality(1 :playsFor :FootballTeam))
+
+# Class: :InterestingTournament (:InterestingTournament)
+
+SubClassOf(:InterestingTournament :Tournament)
+SubClassOf(:InterestingTournament ObjectExactCardinality(1 :hasWinner :DebutTeam))
+
+# Class: :KnownSportGame (:KnownSportGame)
+
+SubClassOf(:KnownSportGame ObjectIntersectionOf(:Team ObjectMinCardinality(2 :plays :KnownSportGame)))
+
+# Class: :Master (:Master)
+
+SubClassOf(:Master ObjectIntersectionOf(:Sportsman :Trainer))
+
+# Class: :MultisportTeam (:MultisportTeam)
+
+SubClassOf(:MultisportTeam :Team)
+SubClassOf(:MultisportTeam ObjectMinCardinality(2 :plays :KnownSportGame))
+
+# Class: :PopularSport (:PopularSport)
+
+SubClassOf(:PopularSport ObjectIntersectionOf(:SportGame ObjectMinCardinality(2 :isPlayedAt :Tournament)))
+
+# Class: :RugbyTeam (:RugbyTeam)
+
+SubClassOf(:RugbyTeam :Team)
+
+# Class: :SmallSportEvent (:SmallSportEvent)
+
+SubClassOf(:SmallSportEvent :SportGame)
+SubClassOf(:SmallSportEvent ObjectSomeValuesFrom(:isPlayedAt :Tournament))
+SubClassOf(:SmallSportEvent ObjectMaxCardinality(2 :includes :SportGame))
+
+# Class: :SportGame (:SportGame)
+
+SubClassOf(:SportGame ObjectSomeValuesFrom(:isPlayedAt :Tournament))
+
+# Class: :Sportsman (:Sportsman)
+
+SubClassOf(:Sportsman :Person)
+SubClassOf(:Sportsman ObjectSomeValuesFrom(:plays :SportGame))
+
+# Class: :StrongAthlete (:StrongAthlete)
+
+SubClassOf(:StrongAthlete :Person)
+SubClassOf(:StrongAthlete ObjectUnionOf(:TeamMember ObjectMinCardinality(3 :plays :SportGame)))
+
+# Class: :Team (:Team)
+
+SubClassOf(:Team ObjectSomeValuesFrom(:takesPartIn :ChampionshipTour))
+
+# Class: :TeamMember (:TeamMember)
+
+SubClassOf(:TeamMember :Person)
+SubClassOf(:TeamMember ObjectSomeValuesFrom(:playsFor :Team))
+
+# Class: :TeamSport (:TeamSport)
+
+SubClassOf(:TeamSport ObjectIntersectionOf(:SportGame ObjectSomeValuesFrom(:hasWinner :Winner)))
+
+# Class: :Tournament (:Tournament)
+
+SubClassOf(:Tournament :ChampionshipTour)
+SubClassOf(:Tournament ObjectSomeValuesFrom(:belongsTo :ChampionshipTour))
+
+# Class: :Trainer (:Trainer)
+
+SubClassOf(:Trainer :Person)
+SubClassOf(:Trainer ObjectSomeValuesFrom(:responsibleFor :Team))
+
+# Class: :VolleyballTeam (:VolleyballTeam)
+
+SubClassOf(:VolleyballTeam :Team)
+
+# Class: :Winner (:Winner)
+
+SubClassOf(:Winner :Person)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: :B (:B)
+
+ClassAssertion(:BasketballTeam :B)
+ClassAssertion(:DebutTeam :B)
+ClassAssertion(:Winner :B)
+ObjectPropertyAssertion(:participatesIn :B :BOct)
+ObjectPropertyAssertion(:participatesIn :B :BOct1)
+ObjectPropertyAssertion(:participatesIn :B :BOct2)
+
+# Individual: :BOct (:BOct)
+
+ClassAssertion(:ChampionshipTour :BOct)
+
+# Individual: :BOct1 (:BOct1)
+
+ClassAssertion(:ChampionshipTour :BOct1)
+ClassAssertion(:Tournament :BOct1)
+ObjectPropertyAssertion(:hasWinner :BOct1 :B)
+
+# Individual: :BOct2 (:BOct2)
+
+ClassAssertion(:ChampionshipTour :BOct2)
+ClassAssertion(:Tournament :BOct2)
+
+# Individual: :BV (:BV)
+
+ClassAssertion(:BasketballTeam :BV)
+ClassAssertion(:VolleyballTeam :BV)
+ObjectPropertyAssertion(:participatesIn :BV :BVNov)
+ObjectPropertyAssertion(:participatesIn :BV :BVNov1)
+ObjectPropertyAssertion(:participatesIn :BV :BVOct)
+ObjectPropertyAssertion(:participatesIn :BV :BVOct1)
+ObjectPropertyAssertion(:participatesIn :BV :BVOct2)
+
+# Individual: :BVNov (:BVNov)
+
+ClassAssertion(:ChampionshipTour :BVNov)
+
+# Individual: :BVNov1 (:BVNov1)
+
+ClassAssertion(:Tournament :BVNov1)
+
+# Individual: :BVOct (:BVOct)
+
+ClassAssertion(:ChampionshipTour :BVOct)
+
+# Individual: :BVOct1 (:BVOct1)
+
+ClassAssertion(:Tournament :BVOct1)
+
+# Individual: :BVOct2 (:BVOct2)
+
+ClassAssertion(:Tournament :BVOct2)
+
+# Individual: :Basketball (:Basketball)
+
+ClassAssertion(:KnownSportGame :Basketball)
+
+# Individual: :Bob (:Bob)
+
+ClassAssertion(:Sportsman :Bob)
+ObjectPropertyAssertion(:plays :Bob :SportGame1)
+
+# Individual: :FR (:FR)
+
+ClassAssertion(:FootballTeam :FR)
+ClassAssertion(:RugbyTeam :FR)
+ObjectPropertyAssertion(:takesPartIn :FR :FROct)
+ObjectPropertyAssertion(:takesPartIn :FR :FROct1)
+
+# Individual: :FROct (:FROct)
+
+ClassAssertion(:ChampionshipTour :FROct)
+
+# Individual: :FROct1 (:FROct1)
+
+ClassAssertion(:Tournament :FROct1)
+
+# Individual: :Football (:Football)
+
+ClassAssertion(:KnownSportGame :Football)
+
+# Individual: :Kate (:Kate)
+
+ClassAssertion(:Sportsman :Kate)
+ObjectPropertyAssertion(:plays :Kate :SportGame2)
+ObjectPropertyAssertion(:plays :Kate :SportGame3)
+ObjectPropertyAssertion(:plays :Kate :SportGame4)
+
+# Individual: :Mary (:Mary)
+
+ClassAssertion(:Person :Mary)
+ObjectPropertyAssertion(:responsibleFor :Mary :BV)
+
+# Individual: :Rugby (:Rugby)
+
+ClassAssertion(:KnownSportGame :Rugby)
+
+# Individual: :SportGame1 (:SportGame1)
+
+ClassAssertion(:SportGame :SportGame1)
+ObjectPropertyAssertion(:isPlayedAt :SportGame1 :BVNov1)
+ObjectPropertyAssertion(:isPlayedAt :SportGame1 :BVOct1)
+ObjectPropertyAssertion(:isPlayedAt :SportGame1 :BVOct2)
+
+# Individual: :SportGame2 (:SportGame2)
+
+ClassAssertion(:SportGame :SportGame2)
+ObjectPropertyAssertion(:isPlayedAt :SportGame2 :BVNov1)
+ObjectPropertyAssertion(:isPlayedAt :SportGame2 :BVOct2)
+
+# Individual: :SportGame3 (:SportGame3)
+
+ClassAssertion(:SportGame :SportGame3)
+ObjectPropertyAssertion(:isPlayedAt :SportGame3 :FROct1)
+
+# Individual: :SportGame4 (:SportGame4)
+
+ClassAssertion(:SportGame :SportGame4)
+ObjectPropertyAssertion(:isPlayedAt :SportGame4 :BOct2)
+
+# Individual: :SportGame5 (:SportGame5)
+
+ClassAssertion(:SportGame :SportGame5)
+ObjectPropertyAssertion(:isPlayedAt :SportGame5 :BOct1)
+ObjectPropertyAssertion(:isPlayedAt :SportGame5 :BOct2)
+
+# Individual: :SportGame6 (:SportGame6)
+
+ClassAssertion(:SportGame :SportGame6)
+ObjectPropertyAssertion(:isPlayedAt :SportGame6 :FROct1)
+
+# Individual: :Tim (:Tim)
+
+ClassAssertion(:Sportsman :Tim)
+ObjectPropertyAssertion(:plays :Tim :SportGame5)
+ObjectPropertyAssertion(:plays :Tim :SportGame6)
+
+# Individual: :Volleyball (:Volleyball)
+
+ClassAssertion(:KnownSportGame :Volleyball)
+
+
+)

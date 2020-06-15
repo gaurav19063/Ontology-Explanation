@@ -1,0 +1,997 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#"
+     xml:base="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cpannotationschema="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34">
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl"/>
+        <owl:imports rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#actingRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#actingRoleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasActorRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#castChooseRoleof -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#castChooseRoleof">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#containedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#containedBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#defines"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isContainedShowId"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#dancingRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#dancingRoleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasDancerRole"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#desctiptionOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#desctiptionOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#defines"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDescribedAs"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasActorRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasActorRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasActorRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasChooseCastRole"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasDancerRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasDancerRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasDancerRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasSingerRole -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasSingerRole">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#hasRole"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#singingRoleOf"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#hasSingerRole"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isAddedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isAddedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isAddedAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isContainedShowId -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isContainedShowId">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isContainedShowId"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDescribedAs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDescribedAs">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDescribedAs"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDurationOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDurationOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isDurationOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isListedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isListedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isListedIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isRated -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isRated">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isRated"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isReleasedInCountry -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isReleasedInCountry">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CountryReleasedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isReleasedInYear -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isReleasedInYear">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTitled -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTitled">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#titleOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTitled"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTypedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTypedOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#isDefinedIn"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#typeOf"/>
+        <rdfs:domain rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type"/>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#isTypedOf"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#singingRoleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#singingRoleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#isRoleOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#titleOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#titleOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#defines"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#typeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#typeOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#defines"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CountryReleasedIn -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CountryReleasedIn">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl#Agent"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/objectrole.owl#Role"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TvShow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TvShow">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Concept"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type">
+        <rdfs:subClassOf rdf:resource="http://www.ontologydesignpatterns.org/cp/owl/description.owl#Description"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Amir_Khan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Amir_Khan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Amit_Trivedi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Amit_Trivedi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Anubhan_Sinha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Anubhan_Sinha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Arijit_Singh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Arijit_Singh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Article_15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Article_15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Ayushman_Khurana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Ayushman_Khurana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Singer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#BlackPanther -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#BlackPanther">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Black_Widow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Black_Widow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CaptenMarvel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CaptenMarvel">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Comedies -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Comedies">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#GOT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#GOT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TvShow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Hritik_Roshan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Hritik_Roshan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Dancer"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#India -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#India">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CountryReleasedIn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#IronMan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#IronMan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Japan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Japan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Lost_In_Space -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Lost_In_Space">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TvShow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Love_Story -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Love_Story">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Moonwalkers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Moonwalkers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#PK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#PK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Prison_Break -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Prison_Break">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TvShow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#R -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#R">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Richerd_Fin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Richerd_Fin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Robert_Downey_Junior -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Robert_Downey_Junior">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Scarlet_Jhonson -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Scarlet_Jhonson">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Actor"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Cast"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ChooseCastMember"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Sci-_fi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Sci-_fi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Stand-UP_Comedy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Stand-UP_Comedy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-MA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-MA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-Y7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#TV-Y7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Rating"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#The_Runner -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#The_Runner">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#The_Spy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#The_Spy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Thor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Thor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Movie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Thriller -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Thriller">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Tim_Meltby -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Tim_Meltby">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Director"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Tvshow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Tvshow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#UAE -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#UAE">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#UK -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#UK">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#USA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#USA">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Country"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#CountryReleasedIn"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Wedding_story -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Wedding_story">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#movie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#movie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Type"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#save_the_universe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#save_the_universe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#About"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2010 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2010">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2011 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2011">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2012 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2012">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2017 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2017">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2020 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#2020">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ReleaseYear"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Duration"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#4_sep_2018 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#4_sep_2018">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#6_Sep_2019 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#6_Sep_2019">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#70234439 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#70234439">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#70304985 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#70304985">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#80058654 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#80058654">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#8145628 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#8145628">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ShowId"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#9_sep_2016 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#9_sep_2016">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#AddedDate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Kids&apos;_TV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#Kids&apos;_TV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/gaurav/ontologies/2020/3/untitled-ontology-34#ListedCategory"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
